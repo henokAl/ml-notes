@@ -63,7 +63,7 @@ using a full distribution over θ. the second difference from the maximum likeli
 training examples is large.
 * Linear Regression to Classification problem by using the logistic sigmoid function to squash the output of the linear function into the
 interval (0, 1) and interpret that value as a probability
-* SVM - t(W)X+b > 0 -> class 1 and t(W)+b<0 -> class 0
+* SVM - t(W)X+b > 0 -> class 1 and t(W)X+b<0 -> class 0
 * Gaussian Kernel aka RBF ->  performs kind of template matching  -> SVMS are enhanced by the kernel trick
 ** A major drawback to kernel machines is that the cost of evaluating the decision function is linear in the number of training examples, because the i-th example
 contributes a term α i k(x , x ( i ) ) to the decision function.
