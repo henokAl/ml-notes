@@ -40,3 +40,33 @@ the testing test.
 * Bias and variance measure two different sources of error in an estimator.
 * Bias measures the expected deviation from the true value of the function or parameter.
 * Variance provides a measure of the deviation from the expected estimator value that any particular sampling of the data is likely to cause.
+* What happens when we are given a choice between two estimators, one with more bias and one with more variance?  Trade off between bias and variance is handled by cross-validation method.
+* other way of handling the trade-off is using MSE b/n bias and variance
+* As model capacity increases, bias decreases and variance increases.
+* Consistency means as the number of the sample size increases the point estimate of a parameter convergs to the actual parameter value.
+* Consistency ensures that the bias induced by the estimator diminishes as the number of data examples grows.
+* maximum likelihood as an attempt to make the model distribution match the empirical distribution p̂ data .
+* Maximum Likelihood Estimate : principle from which we can derive specific functions that are good estimators for different models.
+* for Linear regression : MLE derives the MSE, ie, maximizing the log likelihood wrt w === minimizing the MSE wrt w
+* maximum likelihood is often considered the preferred estimator to use for machine learning. When the number
+of examples is small enough to yield overfitting behavior, regularization strategies
+such as weight decay may be used to obtain a biased version of maximum likelihood
+that has less variance when training data is limited.
+* Bayesian vs frequentist statistics =>
+** frequentist statistics and approaches based on estimating a single value of θ, then making all predictions thereafter based on that one
+estimate.
+** Bayesian statistics : Another approach  that considers all possible values of θ when making a prediction.
+* Bayesian estimation offers two important differences. First, unlike the maximum likelihood approach that makes
+predictions using a point estimate of θ, the Bayesian approach is to make predictions
+using a full distribution over θ. the second difference from the maximum likelihood approach is due to the contribution of the Bayesian prior distribution.
+* Bayesian methods typically generalize much better when limited training data is available, but typically suffer from high computational cost when the number of
+training examples is large.
+* Linear Regression to Classification problem by using the logistic sigmoid function to squash the output of the linear function into the
+interval (0, 1) and interpret that value as a probability
+* SVM - t(W)X+b > 0 -> class 1 and t(W)+b<0 -> class 0
+* Gaussian Kernel aka RBF ->  performs kind of template matching  -> SVMS are enhanced by the kernel trick
+** A major drawback to kernel machines is that the cost of evaluating the decision function is linear in the number of training examples, because the i-th example
+contributes a term α i k(x , x ( i ) ) to the decision function.
+** Support vector machines are able to mitigate this by learning an α vector that contains mostly zeros. Training examples with non zero learning α are support vectors
+** Kernel machines also suffer from a high computational cost of training when the dataset is large. Kernel machines struggle to generalize with the mostly used kernels and
+can not generalize thus deep learning methods came to resolve this issues with the SV.
