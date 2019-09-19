@@ -6,4 +6,6 @@ trained on the training data.
 * Assumption that is made is i.i.d = > the distributions generating data are assumed to be identically distributed but
 test and training data are independent. Identically distributed means drawn from same distribution.
 
-$ \sum_{\forall i}{x_i^{2}} $
+Problems with ML models can be underfitting and overfitting.
+* underfitting -> model not able to achieve low error on training data.
+* overfitting -> too large gap on test and training data.
