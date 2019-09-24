@@ -22,4 +22,35 @@ capacity is limited to linear functions, so the model cannot understand the inte
 * Feedforward networks have introduced the concept of a hidden layer, and this requires us to choose the activation functions that will
 be used to compute the hidden layer values.
 * XOR problem shows how linear model can not handle the XOR function, this is solved by FeedForward NN
-* 192, 244
+
+Gradient Based Learning
+* Difference betweeen linear models and neural networks is that the nonlinearity of a neural network causes most
+ interesting loss functions to become non-convex.
+ * Using MSE -Mean Sqaured Error or MAE -Mean Abolute Error- for Gradient based optimization is not good choice. Cross entropy cost functions are better with 
+ Gradient based learning optimizations 
+ * z = tr(W)*h + b -> unnormalized log probabilities
+ * softMax function is found by expo and normalizing z exp(z)/sum(exp(z))
+Gradient Decent Optimization 
+    * w(t+1) =w(t) - learning_rate*chnage_in_error_wrt_w(t)
+    * w ( t+1) = w ( t ) − η∇E(w ( t ) )
+    * ∇E(w ( τ ) ) is evaluated for the training data
+    * Batch methods -> use all the data for the update step 
+    * At each step the weight vector is moved in the direction of the greatest rate of decrease of the error function,
+and so this approach is known as gradient descent or steepest descent. It's poor method compared to Conjugate QN
+    * Faster alternatives to simple GD optimization are conjugate gradient and Quasi-Newton
+    * Unlike gradient descent, these algorithms have the property that the error function always decreases at 
+    each iteration unless the weight vector has arrived at a local or global minimum.
+    
+Online GD [Stochastic GD , Sequential GD]
+* Makes update to the weight vector based on one data input
+* w ( τ +1) = w ( τ ) − η∇E n (w ( τ ) ).
+* Stochastic GD chooses random input for training the model ie. samples are selected randomly 
+
+Why online method better than batch GD? 
+* online methods handle redundancy in the data much more efficiently.
+* on-line gradient descent escape the possibility of being stuck in local minima
+
+Error Propagation (Backprop)
+* efficient technique for evaluating the gradient of an error function E(w) for a feed-forward neural network.
+* this can be achieved using a local message passing scheme in which information is sent alternately forwards and backwards through the network
+* Efficiency : a[j]= sum(w [j][i] *z[i] ) O(W) steps
